@@ -1,0 +1,16 @@
+{application, grisp_keychain, [
+    {description, "An OTP application"},
+    {vsn, "0.1.0"},
+    {registered, []},
+    {mod, {grisp_keychain_app, []}},
+    {applications, [
+        kernel,
+        stdlib
+    ]},
+    {env, [
+        {api_module, grisp_keychain_filesystem}
+    ]},
+    {modules, []},
+    {licenses, ["Apache-2.0"]},
+    {links, []}
+ ]}.
