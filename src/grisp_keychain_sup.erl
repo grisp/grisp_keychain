@@ -1,8 +1,3 @@
-%%%-------------------------------------------------------------------
-%% @doc grisp_keychain top level supervisor.
-%% @end
-%%%-------------------------------------------------------------------
-
 -module(grisp_keychain_sup).
 
 -behaviour(supervisor).

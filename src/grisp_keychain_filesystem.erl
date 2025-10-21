@@ -1,5 +1,10 @@
 -module(grisp_keychain_filesystem).
 
+-moduledoc """
+Filesystem `api_module` for grisp_keychain
+
+Implements the keychain API for direct filesystem based access to certificates and keys.
+""".
 
 %--- Includes ------------------------------------------------------------------
 
@@ -20,7 +25,7 @@
 %--- API Functions -------------------------------------------------------------
 
 -spec tls_options(DomainName :: atom() | string() | binary() |  undefined)
-    -> ssl:tls_client_option().
+    -> [ssl:tls_client_option()].
 
 tls_options(DomainName) ->
     {CertsKeys, ClientTrustedCerts} =

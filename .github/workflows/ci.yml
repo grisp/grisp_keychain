@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-docs:
+    name: Build and Test
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        otp: ['28', '27']
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Erlang/OTP
+        uses: erlef/setup-beam@v1
+        with:
+          otp-version: ${{ matrix.otp }}
+          rebar3-version: '3'
+
+      - name: Compile
+        run: rebar3 compile
+
+      - name: Run ex_doc
+        run: rebar3 ex_doc
+
+      - name: Run dialyzer
+        run: rebar3 dialyzer

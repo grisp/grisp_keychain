@@ -67,6 +67,7 @@ read_cert(primary, der) ->
 %--- Internal Functions --------------------------------------------------------
 
 -doc false.
+-dialyzer({nowarn_function, delegate_call/2}).
 -spec delegate_call(Function :: atom(), Args :: [term()]) -> term().
 
 delegate_call(Function, Args) ->

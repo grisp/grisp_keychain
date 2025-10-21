@@ -8,6 +8,8 @@ and this project adheres to
 
 ## [Unreleased]
 
+## [1.0.0] - 2025-10-21
+
 ### Added
 
 - Initial implementation of keychain API for managing TLS certificates and keys
@@ -24,5 +26,5 @@ and this project adheres to
   - `tls_options/1` - Get TLS options for a specific domain
   - `read_cert/2` - Read primary client certificate in DER format
 
-
-[Unreleased]: https://github.com/grisp/grisp_keychain/compare/404eb05fcd0654c496caaca6f961142305792d99...HEAD
+[Unreleased]: https://github.com/grisp/grisp_keychain/compare/1.0.0...HEAD
+[1.0.0]: https://github.com/grisp/grisp_keychain/releases/tag/1.0.0

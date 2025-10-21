@@ -1,6 +1,6 @@
 {application, grisp_keychain, [
-    {description, "An OTP application"},
-    {vsn, "0.1.0"},
+    {description, "Common layer to access secrets and identities on GRiSP devices"},
+    {vsn, semver},
     {registered, []},
     {mod, {grisp_keychain_app, []}},
     {applications, [
@@ -12,5 +12,16 @@
     ]},
     {modules, []},
     {licenses, ["Apache-2.0"]},
-    {links, []}
+    {links, [
+        {"Homepage", "https://www.grisp.io"},
+        {"Changelog", "https://github.com/grisp/grisp_keychain/blob/main/CHANGELOG.md"},
+        {"GitHub", "https://github.com/grisp/grisp_keychain"}
+    ]},
+    {files, [
+        "LICENSE",
+        "README.md",
+        "rebar.*",
+        "include",
+        "src"
+    ]}
  ]}.
