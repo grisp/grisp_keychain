@@ -43,6 +43,15 @@ Defaults to `grisp_keychain_filesystem`.
 {tls_verify, verify_peer}
 ```
 
+#### `allow_expired_certs`
+**Type:** `boolean()`
+**Default:** `false`
+**Description:** Allow expired or future certificates.
+
+```erlang
+{allow_expired_certs, true}
+```
+
 ### Certificate and Key Paths
 
 #### `client_certs`
@@ -174,7 +183,8 @@ DerCert = grisp_keychain:read_cert(primary, der).
     {client_certs, {priv, my_app, "certs/client.pem"}},
     {client_key, {priv, my_app, "keys/client-key.pem"}},
     {tls_client_trusted_certs, {priv, my_app, "certs/ca"}},
-    {tls_server_trusted_certs, {priv, my_app, "certs/servers"}}
+    {tls_server_trusted_certs, {priv, my_app, "certs/servers"}},
+    {allow_expired_certs, false}
 ]}
 ```
 

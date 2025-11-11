@@ -8,7 +8,8 @@
         stdlib
     ]},
     {env, [
-        {api_module, grisp_keychain_filesystem}
+        {api_module, grisp_keychain_filesystem},
+        {allow_expired_certs, false}
     ]},
     {modules, []},
     {licenses, ["Apache-2.0"]},
