@@ -8,6 +8,12 @@ and this project adheres to
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-02-11
+
+### Added
+
+- `allow_expired_certs` option for TLS verification
+
 ## [1.0.0] - 2025-10-21
 
 ### Added
@@ -26,5 +32,6 @@ and this project adheres to
   - `tls_options/1` - Get TLS options for a specific domain
   - `read_cert/2` - Read primary client certificate in DER format
 
-[Unreleased]: https://github.com/grisp/grisp_keychain/compare/1.0.0...HEAD
+[Unreleased]: https://github.com/grisp/grisp_keychain/compare/1.1.0...HEAD
+[1.1.0]: https://github.com/grisp/grisp_keychain/releases/tag/1.1.0
 [1.0.0]: https://github.com/grisp/grisp_keychain/releases/tag/1.0.0
